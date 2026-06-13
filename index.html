@@ -1,0 +1,156 @@
+```html
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="SpatiotemporalPE: a positional encoding that calibrates temporal distance using observed state variation."
+    />
+    <title>SpatiotemporalPE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Noto+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <section class="hero container">
+        <h1>
+          Spatiotemporal Perceptron with Positional Encoding:
+          <span>A State-Space Perspective</span>
+        </h1>
+
+        <div class="authors" aria-label="Authors">
+          <span>Tianyi Shi</span><sup>1</sup>,
+          <a href="https://chq1155.github.io/" target="_blank" rel="noopener noreferrer">Hanqun Cao</a><sup>1</sup>,
+          <a href="https://liyuhao.com.cn/" target="_blank" rel="noopener noreferrer">Yuhao Li</a><sup>1</sup>,
+          <a href="https://www.cse.cuhk.edu.hk/~pheng/" target="_blank" rel="noopener noreferrer">Pheng-Ann Heng</a><sup>1</sup>,
+          <span>Weitao Du</span><sup>2</sup>,
+          <a href="https://chao1224.github.io/" target="_blank" rel="noopener noreferrer">Shengchao Liu</a><sup>1</sup>
+        </div>
+
+        <p class="venue">
+          <sup>1</sup>The Chinese University of Hong Kong &nbsp;&nbsp;
+          <sup>2</sup>Alibaba Group
+        </p>
+
+        <nav class="links" aria-label="Project links">
+          <a class="button disabled" href="#" aria-disabled="true" tabindex="-1">
+            <span class="button-icon">▣</span>
+            Paper
+          </a>
+          <a
+            class="button"
+            href="https://github.com/sty-1112/TemporalPE"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span class="button-icon github-icon" aria-hidden="true"></span>
+            Code
+          </a>
+        </nav>
+      </section>
+
+      <section class="paper-section container">
+        <h2>Visualization of the Last Snapshot on Four Protein-Ligand Dynamics</h2>
+        <p>
+          The final-snapshot visualization provides a direct comparison of
+          predicted ligand binding poses on four protein-ligand dynamics against
+          the ground truth.
+        </p>
+        <figure>
+          <img
+            src="assets/figure-3b.png"
+            alt="Final snapshot visualizations for four protein-ligand dynamics"
+          />
+          <figcaption>
+            Visualization of the last snapshot on four protein-ligand dynamics.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="paper-section container">
+        <h2>Design Motivation</h2>
+        <p>
+          SpatiotemporalPE combines spatial information and temporal information
+          from the observation sequence to construct token positions in the
+          <span class="math">Spatiotemporal Realm</span>. In this realm, each
+          token is represented by its spatial coordinate and an
+          observation-difference temporal coordinate, so attention measures
+          relative displacement in a joint spatiotemporal positional space.
+        </p>
+        <figure>
+          <img
+            src="assets/figure-1.png"
+            alt="Comparison between raw time and the SpatiotemporalPE position"
+          />
+          <figcaption>
+            From a state-space model on the time realm to a state-aware
+            spatiotemporal position.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="paper-section container">
+        <h2>Design Motivation of Observation-difference Mapping</h2>
+        <p>
+          The Observation-difference Map is designed so that the coordinate
+          increment <span class="math">Δf</span> is proportional to the magnitude
+          of state variation. Instead of treating raw
+          <span class="math">Δt</span> as the temporal distance, it stretches
+          intervals with larger observed changes and contracts intervals with
+          smaller changes. The dashed circles illustrate the expected magnitude
+          of state variation, not its direction.
+        </p>
+        <figure class="narrow">
+          <img
+            src="assets/figure-2b.png"
+            alt="Design goal of the observation-difference map"
+          />
+          <figcaption>
+            Design goal of Observation-difference Map.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="paper-section container">
+        <h2>Oscillation Visualization with RMSF</h2>
+        <figure>
+          <img
+            src="assets/figure-3a.png"
+            alt="RMSF oscillation curves for protein-ligand trajectories"
+          />
+          <figcaption>
+            Oscillation visualization with RMSF.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="citation-section">
+        <div class="container">
+          <h2>Citation</h2>
+          <pre><code>@article{spatiotemporalpe,
+  title   = {Spatiotemporal Perceptron with Positional Encoding:
+             A State-Space Perspective},
+  author  = {Tianyi Shi and Hanqun Cao and Yuhao Li and Pheng-Ann Heng and Weitao Du and Shengchao Liu},
+  journal = {Publication details},
+  year    = {20XX}
+}</code></pre>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Website template inspired by
+        <a href="https://chao1224.github.io/MoleculeSTM">MoleculeSTM</a>.
+      </p>
+    </footer>
+  </body>
+</html>
+```
